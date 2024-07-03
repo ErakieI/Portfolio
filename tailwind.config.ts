@@ -10,11 +10,19 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        "bleu-vert": '#5FC2BA',
+        "bordeau": '#1C2942',
+        "beige-clair": '#FEECE6',
+      },
+      fontFamily: {
+        sans: ['Raleway', 'sans-serif'],
       },
     },
   },
   plugins: [],
 };
+
 export default config;

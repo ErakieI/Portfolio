@@ -1,0 +1,32 @@
+.typing-animation-container {
+    position: relative;
+    font-family: 'Courier Prime', monospace;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .typed-text {
+    display: inline-block;
+  }
+  
+  .typing-bar {
+    display: inline-block;
+    width: 5px;
+    background-color: black;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
