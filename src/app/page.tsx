@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Navbar from '../components/navbar';
-import Projet from '../components/projet';
-import Skill from '../components/skill';
-import Footer from '../components/footer';
-import ContactForm from '../components/ContactForm';
-import LargeHeader from '../components/header';
-import TypingAnimation from '../components/typingAnimation';
+import Navbar from '../components/navbar.tsx';
+import Projet from '../components/projet.tsx';
+import Skill from '../components/skill.tsx';
+import Footer from '../components/footer.tsx';
+import ContactForm from '../components/ContactForm.tsx';
+import LargeHeader from '../components/header.tsx';
+import TypingAnimation from '../components/typingAnimation.tsx';
 import Image from 'next/image';
 import '../style/globals.scss';
 
