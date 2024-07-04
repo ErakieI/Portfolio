@@ -12,7 +12,7 @@ import '../style/globals.scss';
 
 export default function Home() {
 	return (
-		<main className="w-full p-0 flex flex-col items-center justify-center bg-white dark:bg-gray-800">
+		<main className="w-full p-0 flex flex-col items-center justify-center bg-white">
 			{/* Accueil */}
 
 			<section id="accueil" className="w-full text-center text-white">
@@ -64,35 +64,41 @@ export default function Home() {
 					{/* Projets */}
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 						<Projet
-							img="chemin/vers/image.jpg"
-							titre="Titre du Projet"
-							description="Description du projet."
-							githubRepo="lien/vers/votre/repository"
+							img="/images/projets/booki.png"
+							titre="Booki - HTML5 / CSS"
+							description="Booki est un site de réservation en ligne de logements. Le projet était orienté sur HTML et CSS, la difficulté était d'avoir un site responsive."
+							githubRepo="https://github.com/ErakieI/Booki_OC"
 						/>{' '}
 						<Projet
-							img="chemin/vers/image.jpg"
-							titre="Titre du Projet"
-							description="Description du projet."
-							githubRepo="lien/vers/votre/repository"
+							img="/images/projets/bluel.png"
+							titre="Sophie Bluel - JavaScript"
+							description="Ce projet consistait à intéragir avec une API en utilisant JavaScript. Il fallait faire appel aux différentes méthodes CRUD pour récupérer ou envoyer des données à l'API et ainsi pouvoir manipuler les données du site (Travaux / comptes utilisateurs)."
+							githubRepo="https://github.com/ErakieI/Projet-3-Sophie-Bluel"
 						/>{' '}
 						<Projet
-							img="chemin/vers/image.jpg"
-							titre="Titre du Projet"
-							description="Description du projet."
-							githubRepo="lien/vers/votre/repository"
+							img="/images/projets/nina.png"
+							titre="Nina Carducci - Optimisation et référencement naturel"
+							description="Pour ce projet, l'objectif était d'optimiser le site de photographe en utilisant une résolution des images adaptée à leur taille maximale et d'améliorer le référencement naturel en utilisant une sémantique apropriée dans le code ainsi que des balises méta, sans oublier l'accessibilité. L'analyse de la lighthouse était le pilier de cet exercice."
+							githubRepo="https://github.com/ErakieI/Projet-4-Nina-Carducci"
 						/>{' '}
 						<Projet
-							img="chemin/vers/image.jpg"
-							titre="Titre du Projet"
-							description="Description du projet."
-							githubRepo="lien/vers/votre/repository"
+							img="/images/projets/kasa.png"
+							titre="Kasa - React"
+							description="Pour ce projet, l'objectif était de prendre en main le framework React. J'ai donc appris à fabriquer des composants réutilisables et à me servir de SASS pour simplifier le style et profiter de ses nombreuses fonctionnalités. L'utilisation des nombreux hooks de React étaient donc indispensables, ainsi que le router permettant d'orienter l'url vers une page correspondant à l'ID du logement."
+							githubRepo="https://github.com/ErakieI/Projet5_kasa"
 						/>{' '}
 						<Projet
-							img="chemin/vers/image.jpg"
-							titre="Titre du Projet"
-							description="Description du projet."
+							img="/images/projets/grimoire.png"
+							titre="Mon vieux grimoire - NodeJS"
+							description="Mon vieux grimoire est un site pour visualiser et ajouter des livres avec leur notation. Ce projet back-end sous Node.js utilise une base de données NoSQL : MongoDB. La principale difficulté était de lier chaque livre à l'ID de son utilisateur pour que seul celui-ci puisse modifier ses informations. Les utilisateurs peuvent noter les livres des autres, permettant ainsi de calculer une moyenne des notes."
 							githubRepo="lien/vers/votre/repository"
 						/>
+						<Projet
+							img="/images/projets/kanban.png"
+							titre="Menu Maker - Gestion de projet"
+							description="Ce projet un peu différent des autres tournait autour de la gestion de projet. Il a fallu faire un Kanban et créer différentes étiquettes ainsi que le contenu, déterminer des spécifications techniques ainsi que leur solution, faire de la veille technologique sur l'outil Feedly, s'intéresser à la méthodologie Agile et plus pariculièrement SCRUM, puis faire une présentation pour le client."
+							githubRepo="https://github.com/ErakieI/Menu-Maker"
+						/>{' '}
 					</div>
 				</div>
 			</section>
@@ -104,38 +110,38 @@ export default function Home() {
 				</h2>
 				{/* Liste des compétences */}
 				<div className="flex gap-10 flex-wrap justify-center">
-					<Skill name="HTML5" percentage={90} logo="/images/logos/html5.png" />
-					<Skill name="CSS" percentage={90} logo="/images/logos/css.png" />
+					<Skill name="HTML5" percentage={80} logo="/images/logos/html5.png" />
+					<Skill name="CSS" percentage={70} logo="/images/logos/css.png" />
 					<Skill
 						name="JavaScript"
-						percentage={65}
+						percentage={45}
 						logo="/images/logos/js.png"
 					/>
 					<Skill
 						name="NodeJS"
-						percentage={40}
+						percentage={30}
 						logo="/images/logos/nodeJS.png"
 					/>
-					<Skill name="React" percentage={45} logo="/images/logos/react.png" />
-					<Skill name="SASS" percentage={80} logo="/images/logos/sass.png" />
+					<Skill name="React" percentage={35} logo="/images/logos/react.png" />
+					<Skill name="SASS" percentage={65} logo="/images/logos/sass.png" />
 					<Skill
 						name="NextJS"
-						percentage={35}
+						percentage={25}
 						logo="/images/logos/nextJS.png"
 					/>
 					<Skill
 						name="TypeScript"
-						percentage={30}
+						percentage={20}
 						logo="/images/logos/typeScript.png"
 					/>
 					<Skill
 						name="TailwindCSS"
-						percentage={85}
+						percentage={70}
 						logo="/images/logos/tailWindCSS.png"
 					/>
 					<Skill
 						name="GitHub"
-						percentage={70}
+						percentage={55}
 						logo="/images/logos/gitHub.png"
 					/>
 				</div>
@@ -151,7 +157,7 @@ export default function Home() {
 			{/* CV */}
 			<section
 				id="cv"
-				className="w-full bg-white dark:bg-gray-900 p-8 shadow-md w-full "
+				className="w-full bg-white p-8 shadow-md w-full "
 			>
 				<h2 className="text-center text-3xl font-bold mb-4 pb-8">CV</h2>
 				{/* Lien vers le CV */}

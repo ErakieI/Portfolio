@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full px-3 py-2 pl-5 border-2 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 pl-5 border-2 border-gray-300 focus:ring-2 focus:ring-blue-500"
         />
       </div>
       <div className="mb-4">
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border-2 border-gray-300 focus:ring-2 focus:ring-blue-500"
         />
       </div>
       <div className="mb-4">
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
-          className="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 h-64 resize-none"
+          className="w-full px-3 py-2 border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 h-64 resize-none"
         ></textarea>
       </div>
       <div className="flex justify-center">

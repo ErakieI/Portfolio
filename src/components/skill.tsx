@@ -19,7 +19,7 @@ const Skill: React.FC<SkillProps> = ({ logo, name, percentage }) => {
       <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100">
         <circle
           className="text-bleu-vert"
-          strokeWidth="10"
+          strokeWidth="6"
           strokeDasharray={strokeDasharray}
           strokeDashoffset="0"
           r={radius}
@@ -30,7 +30,7 @@ const Skill: React.FC<SkillProps> = ({ logo, name, percentage }) => {
         />
         <circle
           className="text-bordeau"
-          strokeWidth="10"
+          strokeWidth="6"
           strokeDasharray={strokeDasharray}
           strokeDashoffset={strokeDashoffset}
           r={radius}
@@ -46,7 +46,7 @@ const Skill: React.FC<SkillProps> = ({ logo, name, percentage }) => {
         />
       </svg>
       <div className="relative flex flex-col items-center justify-center w-full h-full">
-        <img className="w-11 h-10" src={logo} />
+        <img className="w-7 h-6" src={logo} />
         <span className="text-lg font-bold">{name}</span>
         <span className="text-lg font-black text-bordeau">{percentage}%</span>
       </div>
