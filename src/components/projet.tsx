@@ -39,21 +39,26 @@ const Projet: React.FC<ProjetProps> = ({ img, titre, description, githubRepo }) 
   }, []);
 
   return (
-    <div className="bg-white shadow-lg p-2 rounded-lg overflow-hidden">
+    <div className="relative bg-white shadow-lg rounded-lg overflow-hidden group">
       <img
-        className="w-full h-48 object-cover object-center cursor-pointer"
+        className="w-auto h-auto object-cover object-center"
         src={img}
         alt={titre}
-        onClick={openModal}
       />
-      <div className="pt-4 text-center flex justify-center align-center">
-        <h2 className="text-xl font-bold mb-2">{titre}</h2>
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h2 className="text-xl font-bold text-center text-white mb-2">{titre}</h2>
+        <button
+          onClick={openModal}
+          className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        >
+          En savoir plus
+        </button>
       </div>
 
       {/* Modale */}
       {modalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div ref={modalRef} className="w-1/2 h-4/5 bg-white p-4 rounded-lg relative">
+          <div ref={modalRef} className="w-full sm:w-3/4 lg:w-1/2 h-auto bg-white p-4 rounded-lg relative overflow-y-auto">
             <button
               className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 modal-close-btn"
               onClick={closeModal}
@@ -62,8 +67,8 @@ const Projet: React.FC<ProjetProps> = ({ img, titre, description, githubRepo }) 
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img className="w-4/5 h-3/5 object-cover object-center mb-4 m-auto" src={img} alt={titre} />
-            <h2 className="text-2xl font-bold mb-2 text-center">{titre}</h2>
+            <img className="w-3/4 h-auto object-cover object-center mb-4 m-auto" src={img} alt={titre} />
+            <h2 className="text-2xl font-bold mb-2 text-center ">{titre}</h2>
             <p className="text-gray-700 mb-4">{description}</p>
             <a
               href={githubRepo}

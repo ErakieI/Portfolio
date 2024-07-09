@@ -79,10 +79,10 @@ const LargeHeader: React.FC = () => {
     if (!ctx) return;
 
     const points: Point[] = [];
-    for (let x = 0; x < width; x += width / 40) {
-      for (let y = 0; y < height; y += height / 40) {
-        const px = x + Math.random() * width / 40;
-        const py = y + Math.random() * height / 40;
+    for (let x = 0; x < width; x += width / 30) {
+      for (let y = 0; y < height; y += height / 30) {
+        const px = x + Math.random() * width / 30;
+        const py = y + Math.random() * height / 30;
         const p: Point = { x: px, originX: px, y: py, originY: py, closest: [], active: 0, circle: null };
         points.push(p);
       }
@@ -153,10 +153,10 @@ const LargeHeader: React.FC = () => {
         ctx.clearRect(0, 0, width, height);
         pointsRef.current.forEach(p => {
           if (Math.abs(getDistance(targetRef.current, p)) < 3000) {
-            p.active = 0.8;
+            p.active = 0.6;
             if (p.circle) p.circle.active = 10;
           } else if (Math.abs(getDistance(targetRef.current, p)) < 10000) {
-            p.active = 0.4;
+            p.active = 0.3;
             if (p.circle) p.circle.active = 4;
           } else if (Math.abs(getDistance(targetRef.current, p)) < 40000) {
             p.active = 0.1;

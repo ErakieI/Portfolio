@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-3/4 p-8 m-auto">
+    <form onSubmit={handleSubmit} className="lg:w-3/4 w-4/5 lg:p-8 m-auto">
       <div className="mb-4">
         <label htmlFor="name" className="sr-only">Nom</label>
         <input
