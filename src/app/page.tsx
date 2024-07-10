@@ -13,7 +13,7 @@ import '../style/globals.scss';
 
 export default function Home() {
 	return (
-		<main className="w-full p-0 flex flex-col items-center justify-center bg-white">
+		<main className="w-full p-0 flex flex-col items-center justify-center ">
 			{/* Accueil */}
 			<section id="accueil" className="w-full text-center text-white">
 				<LargeHeader />
@@ -32,7 +32,7 @@ export default function Home() {
 						height={200}
 					/>
 				</div>
-				<div className="lg:w-1/2 w-full bg-white pl-8 text-left space-y-4 flex flex-col justify-center py-8">
+				<div className="lg:w-1/2 w-full  pl-8 text-left space-y-4 flex flex-col justify-center py-8">
 					<TypingAnimation text="QUI SUIS-JE ?" />
 					<h2 className="text-3xl font-bold mb-4 py-8">PRÉSENTATION :</h2>
 					<p>Depuis plusieurs années, je m'intéresse au code. J'ai donc décidé d'en faire mon métier.</p>
@@ -89,7 +89,7 @@ export default function Home() {
 			</section>
 
 			{/* Compétences */}
-			<section id="competences" className="w-full lg:w-3/4 bg-white p-4 lg:p-8">
+			<section id="competences" className="w-full lg:w-3/4  p-4 lg:p-8">
 				<h2 className="text-center text-3xl font-bold mb-4 pb-8">COMPÉTENCES :</h2>
 				{/* Liste des compétences */}
 				<div className="flex flex-wrap justify-center gap-4 lg:gap-10">
@@ -113,7 +113,7 @@ export default function Home() {
 			</section>
 
 			{/* CV */}
-			<section id="cv" className="w-full bg-white p-4 lg:p-8">
+			<section id="cv" className="w-full  p-4 lg:p-8">
 				<CV />
 			</section>
 			
