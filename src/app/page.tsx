@@ -28,7 +28,7 @@ export default function Home() {
 					<Image
 						src="/images/Profil_effet_peinture.jpg"
 						alt="Logo"
-						width={500}
+						width={450}
 						height={200}
 					/>
 				</div>
