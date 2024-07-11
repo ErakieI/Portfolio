@@ -10,9 +10,10 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus('Sending...');
 
     try {
-      const response = await fetch('http://localhost:5000/api/send-email', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -21,23 +22,24 @@ const ContactForm: React.FC = () => {
       });
 
       if (response.ok) {
-        setStatus('Email sent successfully');
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
+        setStatus('Email sent successfully!');
       } else {
-        setStatus('Error sending email');
+        setStatus('Failed to send email.');
       }
     } catch (error) {
+      setStatus('Error sending email.');
       console.error('Error:', error);
-      setStatus('Error sending email');
     }
+
+    // Réinitialiser le formulaire après soumission
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
   };
 
   return (
     <form onSubmit={handleSubmit} className="lg:w-3/4 w-4/5 lg:p-8 m-auto">
-      {status && <p>{status}</p>}
       <div className="mb-4">
         <label htmlFor="name" className="sr-only">Nom</label>
         <input
@@ -63,7 +65,7 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="subject" className="sr-only">Sujet</label>
+        <label htmlFor="subject" className="sr-only">Subject</label>
         <input
           type="text"
           id="subject"
@@ -93,6 +95,7 @@ const ContactForm: React.FC = () => {
           Envoyer
         </button>
       </div>
+      {status && <p>{status}</p>}
     </form>
   );
 };
