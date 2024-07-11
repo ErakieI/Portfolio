@@ -223,11 +223,11 @@ const LargeHeader: React.FC = () => {
       style={{ backgroundImage: `url(https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg)` }}>
       <canvas id="demo-canvas" ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></canvas>
       <div className="absolute inset-0 flex flex-col tracking-wider justify-center items-center text-white z-1">
-        <p className="mt-4 text-lg">Bonjour,</p>
-        <div className='font-bold text-4xl'>
+        <p className="mt-4 text-2xl">Bonjour,</p>
+        <div className='font-bold text-5xl'>
           <h1>Je suis Mathieu JACQUEMIN,</h1>
         </div>
-				<p className="mt-4 text-lg">Developpeur web full-stack</p>
+				<p className="mt-4 text-2xl">Developpeur web full-stack</p>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ export default function Home() {
 			</section>
 
 			{/* Réalisations */}
-			<section id="realisations" className="w-full p-6 lg:p-8 bg-beige-clair">
+			<section id="realisations" className="w-full p-6 lg:p-12 bg-beige-clair">
 				<div className="w-full lg:w-3/4 m-auto">
 					<h2 className="text-center text-3xl font-bold mb-4">RÉALISATIONS :</h2>
 					{/* Projets */}
@@ -51,7 +51,7 @@ export default function Home() {
 						<Projet
 							img="/images/projets/booki.png"
 							titre="Booki - HTML5 / CSS"
-							description="Booki est un site de réservation en ligne de logements. Le projet était orienté sur HTML et CSS, la difficulté était d'avoir un site responsive."
+							description="Booki est un site de réservation en ligne de logements. Le projet était orienté sur HTML5 et CSS, la difficulté de ce premier projet était d'avoir un site responsive."
 							githubRepo="https://github.com/ErakieI/Booki_OC"
 						/>
 						<Projet
@@ -89,7 +89,7 @@ export default function Home() {
 			</section>
 
 			{/* Compétences */}
-			<section id="competences" className="w-full lg:w-3/4  p-4 lg:p-8">
+			<section id="competences" className="w-full p-6 lg:p-12 lg:w-3/4 ">
 				<h2 className="text-center text-3xl font-bold mb-4 pb-8">COMPÉTENCES :</h2>
 				{/* Liste des compétences */}
 				<div className="flex flex-wrap justify-center gap-4 lg:gap-10">
@@ -107,14 +107,12 @@ export default function Home() {
 			</section>
 
 			{/* Contact */}
-			<section id="contact" className="bg-bleu-vert p-4 lg:p-8 w-full">
+			<section id="contact" className="bg-bleu-vert p-6 lg:p-12 w-full">
 				<h2 className="text-center text-3xl font-bold mb-4 pb-8">CONTACT :</h2>
 				<ContactForm />
-			</section>
-
-			{/* CV */}
-			<section id="cv" className="w-full  p-4 lg:p-8">
+				<div id="cv">
 				<CV />
+				</div>
 			</section>
 			
 			{/* Footer */}

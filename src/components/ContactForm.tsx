@@ -32,16 +32,16 @@ const ContactForm: React.FC = () => {
       });
       const result = await response.json();
       if (result.success) {
-        setStatus('Email sent successfully!');
+        setStatus('Email envoyé avec succès !');
         setName('');
         setEmail('');
         setSubject('');
         setMessage('');
       } else {
-        setStatus('Failed to send email.');
+        setStatus('Echec lors de l/envoi du mail.');
       }
     } catch (error) {
-      setStatus('Error sending email.');
+      setStatus('Echec lors de l/envoi du mail.');
       console.error('Error:', error);
     }
   }
