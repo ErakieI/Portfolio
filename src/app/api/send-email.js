@@ -20,6 +20,7 @@ export default async function handler(req, res) {
       res.status(500).send('Error sending email');
     }
   } else {
-    res.status(405).send('Method Not Allowed');
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
